@@ -1,2 +1,44 @@
-<h1>Welcome!</h1>
-<p>Page under construction</p>
+<link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+
+<h1>Autonomous Robot using Vitcon Tracker Data</h1>
+<div class="content">
+
+
+    <div>
+        <h3>Main idea</h3>
+        <p>Users via a web app can order the robot to go to specified locations
+            being the robot capable of avoiding obstacles in its path.</p>
+
+    </div>
+
+
+    <div>
+        <h3>How it works</h3>
+
+        <p>
+            We receive position data from Vicon tracker via wifi communication.
+            Then, the data received is processed in order to update the current
+            position of the robot.
+            The current position, our goal position, and the Arduino feedback, as
+            discuss later, are passed as arguments to our baseline trajectory planning
+            algorithm. Our algorithm returns specific commands that are send via
+            socket to Arduino. Arduino executes the commands (movements) and
+            sends feedback data which are the result of the ultrasonic sensor distance
+            measures that help us to detect current obstacles*.
+            Regarding the interface, the front-end comprehend a web page that
+            receives as input the goal position and displays the current path that
+            robot is building until it reaches the target goal.
+        </p>
+    </div>
+
+    <div class="content_video"">
+        <p><i>One classmate using the robot</i></p> 
+        <video width="500" height="400" controls>
+            <source src="./vis/Autonomous_Robot_Vicon.mp4" type="video/mp4">
+            Demo
+        </video>
+
+    </div>
+
+    <p>*Another approach was executing an avoidance algorithm directly in the Arduino sketch, eliminating feedback to the main algorithm.</p>
+</div>
