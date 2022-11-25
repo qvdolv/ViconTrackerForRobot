@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    color: rgb(77, 77, 170);
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    border: 2px solid rgb(69, 187, 205);
+
+  }
+
+.content{
+
+    align-items: center;
+    margin: 5%;
+}
+
+.content_video {
+
+        align-items: center;
+        margin-top: auto;
+        padding-top: 30px;
+        margin: 1%;
+        text-align: center;
+}
